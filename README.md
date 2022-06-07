@@ -9,7 +9,7 @@ In general, I don't understand why media services and artists don't employ <a ta
 
 As shown on the flow diagram on the left, many DMCA takedown requests are ineffective because the server doesn't have a good way to distinguish false from genuine counter notices (though not shown, the converse issue is also common, where a malicious request [despite penalty of purgery] is made and the service takes down legitimate artwork).  Basically, the service's position is "How do I know which of you is the true owner?  Absent proof, I'm going to arbitrarily retain or reject the upload (perhaps as best suits my businss model)."
 
-<img src="docs/a-0.png" width=50% style="margin:0 auto; width=50%"></img>
+<img src="docs/a-0a.png" width=50% style="margin:0 auto; width=50%"></img>
 
 Why don't we do things instead as in the flow diagram on the right, particularly as indicated in the blue boxes?  Why don't artists, or the graphics programs / scanning programs they use, make a regular habit of creating (and possibly appending) timestamp verifications to the artwork? 
 
@@ -33,7 +33,7 @@ The artist doesn't <i>have</i> to include the vLIC in the published file if they
 
 In the following diagram, creation occurs in the process on the left and verification on the right.
 
-<img src="docs/a-2.png" width=80% style="margin:0 auto"></img>
+<img src="docs/a-2a.png" width=80% style="margin:0 auto"></img>
 
 On the left, Alice basically creates her artwork, creates her preamble, has the preamble signed, and then records the resulting digest (either in the artwork itself with the vLIC chunk described above, saves a standalone vLIC, etc.).
 
