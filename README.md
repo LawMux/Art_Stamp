@@ -33,7 +33,7 @@ The artist doesn't <i>have</i> to include the vLIC in the published file if they
 
 In the following diagram, creation occurs in the process on the left and verification on the right.
 
-<img src="docs/c3.png" width=80% style="margin:0 auto"></img>
+<img src="docs/c3.png" width=50% style="margin:0 auto; width:50%"></img>
 
 On the left, Alice basically creates her artwork, creates her preamble, has the preamble signed, and then records the resulting digest (either in the artwork itself with the vLIC chunk described above, saves a standalone vLIC, etc.).
 
