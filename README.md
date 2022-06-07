@@ -7,9 +7,11 @@ This repo is intended more as a conversation starter than a proper project.
 
 In general, I don't understand why media services and artists don't employ <a target="_blank" href="https://datatracker.ietf.org/doc/html/rfc3161">RFC3161 timestamps</a> to simplify their DMCA compliance.  RFC3161 timestamps are regularly used to authenticate the creation date of an asset. Basically, you reach out to a timestamp server with your data, say "server, please bless this data with your private key including the time at which you did so", the server so blesses, including an indication of the time, and provides you back the signed digest.  Later, if someone wants to confirm that that data existed on that date, then they just verify the digest with the server's public key.
 
-As shown on the flow diagram on the left, many DMCA takedown requests are ineffective because the server doesn't have a good way to distinguish false from genuine counter notices (though not shown, the converse issues is also common, where a malicious request [despite penalty of purgery] is made and the service takes down legitimate artwork).
+As shown on the flow diagram on the left, many DMCA takedown requests are ineffective because the server doesn't have a good way to distinguish false from genuine counter notices (though not shown, the converse issue is also common, where a malicious request [despite penalty of purgery] is made and the service takes down legitimate artwork).  Basically, the service's position is "How do I know which of you is the true owner?  Absent proof, I'm going to arbtrarily retain or reject the upload (perhaps as best suits my businss model)."
 
-<img src="docs/a-0.png" width=80% style="margin:0 auto"></img>
+<img src="docs/a-0.png" width=50% style="margin:0 auto; width=50%"></img>
+
+Why don't we do things instead as in the flow diagram on the right?
 
 # How an Art_Stamp could be structured in a PNG
 
