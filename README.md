@@ -13,7 +13,7 @@ As shown on the flow diagram on the left, many DMCA takedown requests are ineffe
 
 Why don't we do things instead as in the flow diagram on the right, particularly as indicated in the blue boxes?  Why don't artists, or the graphics programs / scanning programs they use, make a regular habit of creating (and possibly appending) timestamp verifications to the artwork? 
 
-I may just be ignorant, but every day I feel like I see stories, e.g., on <a target="_blank" href="https://torrentfreak.com/">TorrentFreak</a> that such a habit would readily resolve.  This is hardly a new concept, so I'm not sure why it's not more widespread.
+I may just be ignorant, but every day I feel like I see stories, e.g., on <a target="_blank" href="https://torrentfreak.com/">TorrentFreak</a> that such a habit would readily resolve.  This is hardly a new concept, so I'm not sure why it's not more widespread.  RFC 3161 has been around since 2001 and I know folks have authenticated artwork and other assets before.
 
 # How an Art_Stamp could be structured in a PNG
 
@@ -26,6 +26,8 @@ As indicated below, PNGs are just a serial collection of byte "chunks."  You can
 So, as indicated in the lower portion, why not always add a chunk at creation, I call the vLIC chunk (i.e., "verify licensing").
 
 vLIC is just JSON text including two portions:  a) a metadata preamble; and b) the timestamp digest of the metadata preamble.  Now, the PNG will "self authenticate" to any downstream recipient.  The metadata preamble includes a base64 copy of the image being authenticated (before you cry "bloat!" where this is identical with the data in the IDAT, I believe the compression reduces it to a pretty trivial size.  Admittedly, that may not be true if IDAT is subsequently modified).  
+
+The artist doesn't <i>have</i> to include the vLIC in the published file if they're worried about bloat, so long as they retain their own copy for use in takedown requests.  As discussed below, though, having vLIC in the file may simplify things.
 
 ## Deployment Walkthrough
 
