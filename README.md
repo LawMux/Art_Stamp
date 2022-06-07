@@ -11,11 +11,21 @@ As shown on the flow diagram on the left, many DMCA takedown requests are ineffe
 
 <img src="docs/a-0.png" width=50% style="margin:0 auto; width=50%"></img>
 
-Why don't we do things instead as in the flow diagram on the right?
+Why don't we do things instead as in the flow diagram on the right, particularly as indicated in the blue boxes?  Why don't artists, or the graphcis programs / scanning programs they use, make a regular habit of creating (and possibly appending) timestamp verifications to the artwork? 
+
+I may just be ignorant, but very day I see stories, e.g., on <a target="_blank" href="https://torrentfreak.com/">TorrentFreak</a> that would seem to easily resolve this.
 
 # How an Art_Stamp could be structured in a PNG
 
-<img src="docs/a-1.png" width=80% style="margin:0 auto"></img>
+I'm particularly fond of the PNG forma for its elegance and simplicity.  
+
+As indicated below, PNGs are just a serial collection of byte "chunks."  You can add an arbitrary number of chunks of your own to the file and it'll still be readable.
+
+<img src="docs/a-1.png" width=50% style="margin:0 auto; width:50%"></img>
+
+So, as indicated in the lower portion, why not always add a chunk at creation, I call the vLIC chunk.
+
+vLIC is just JSON text including two portions:  a) a metadata preamble; and b) the timestamp digest of the metadata preamble.  Now, the PNG will "self authenticate" to any downstream recipient.
 
 # Deployment Walkthrough
 
